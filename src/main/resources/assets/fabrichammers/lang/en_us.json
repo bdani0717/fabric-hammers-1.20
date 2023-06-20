@@ -1,0 +1,11 @@
+{
+  "item.fabrichammers.wooden_hammer": "Wooden Hammer",
+  "item.fabrichammers.stone_hammer": "Stone Hammer",
+  "item.fabrichammers.iron_hammer": "Iron Hammer",
+  "item.fabrichammers.golden_hammer": "Golden Hammer",
+  "item.fabrichammers.emerald_hammer": "Emerald Hammer",
+  "item.fabrichammers.diamond_hammer": "Diamond Hammer",
+  "item.fabrichammers.netherite_hammer": "Netherite Hammer",
+
+  "itemgroup.fabrichammers": "Hammers"
+}

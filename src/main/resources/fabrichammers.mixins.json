@@ -3,7 +3,10 @@
 	"package": "net.w.fabrichammers.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ServerPlayerInteractionManagerMixin"
+	],
+	"client": [
+		"WorldRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
