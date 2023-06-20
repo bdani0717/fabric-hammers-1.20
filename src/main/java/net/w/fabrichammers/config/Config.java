@@ -32,20 +32,21 @@ public class Config {
         put("stone_hammer", new HammerConfig(131, 1, 1.15F, 8F, 1, 5, "minecraft:stone"));
         put("iron_hammer", new HammerConfig(250, 1, 1.7F, 8F, 2, 14, "minecraft:iron_ingot"));
         put("golden_hammer", new HammerConfig(100, 1, 3.5F, 6F, 0, 22, "minecraft:gold_ingot"));
-        put("emerald_hammer", new HammerConfig(750, 1, 2F, 5F, 3, 10, "minecraft:emerald"));
+        put("emerald_hammer", new HammerConfig(750, 1, 2F, 8F, 2, 10, "minecraft:emerald"));
         put("diamond_hammer", new HammerConfig(1561, 1, 2.3F, 8F, 3, 10, "minecraft:diamond"));
         put("netherite_hammer", new HammerConfig(2031, 1, 2.6F, 9F, 4, 15, "minecraft:netherite_ingot"));
     }};
 
-    private float durabilityMultipier = 3.0F;
+    private float hammerDurabilityMultipier = 3.0F;
+    private boolean enableEmeradlTools = true;
+
+
 
     public int getDurability(String id) {
         return hammers.get(id).durability;
     }
 
-    public int getMiningRadius(String id) {
-        return hammers.get(id).miningRadius;
-    }
+    public int getMiningRadius(String id) { return hammers.get(id).miningRadius; }
 
     public float getMiningSpeedMultiplier(String id) {
         return hammers.get(id).miningSpeedMultiplier;
@@ -67,7 +68,7 @@ public class Config {
         return hammers.get(id).repairIngredient;
     }
 
-    public float getDurabilityMultipier() {
-        return this.durabilityMultipier;
-    }
+    public float getHammerDurabilityMultipier() { return this.hammerDurabilityMultipier; }
+
+    public boolean isEnableEmeradlTools() { return this.enableEmeradlTools; }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    " d ",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:emerald"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabrichammers:emerald_sword"
+  }
+}

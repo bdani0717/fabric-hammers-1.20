@@ -4,10 +4,9 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.w.fabrichammers.FabricHammers;
 import net.w.fabrichammers.config.ConfigProvider;
 
-public class HammerMaterial implements ToolMaterial {
+public class CustomToolMaterial implements ToolMaterial {
     private int durability;
     private float miningSpeedMultiplier;
     private float attackDamage;
@@ -15,7 +14,9 @@ public class HammerMaterial implements ToolMaterial {
     private int enchantability;
     private Ingredient repairIngredient;
 
-    public HammerMaterial(
+    public static final CustomToolMaterial EMERALD = new CustomToolMaterial(750, 8F, 2F, 0, 10, "minecraft:emerald");
+
+    public CustomToolMaterial(
             int durability,
             float miningSpeedMultiplier,
             float attackDamage,
@@ -31,9 +32,25 @@ public class HammerMaterial implements ToolMaterial {
         this.repairIngredient = repairIngredient;
     }
 
-    public static HammerMaterial fromConfig(String id) {
-        return new HammerMaterial(
-                (int)(ConfigProvider.CONFIG.getDurability(id) * ConfigProvider.CONFIG.getDurabilityMultipier()),
+    public CustomToolMaterial(
+            int durability,
+            float miningSpeedMultiplier,
+            float attackDamage,
+            int miningLevel,
+            int enchantability,
+            String repairIngredient
+    ) {
+        this.durability = durability;
+        this.miningSpeedMultiplier = miningSpeedMultiplier;
+        this.attackDamage = attackDamage;
+        this.miningLevel = miningLevel;
+        this.enchantability = enchantability;
+        this.repairIngredient = Ingredient.ofItems(Registries.ITEM.get(new Identifier(repairIngredient)));
+    }
+
+    public static CustomToolMaterial fromConfig(String id) {
+        return new CustomToolMaterial(
+                (int)(ConfigProvider.CONFIG.getDurability(id) * ConfigProvider.CONFIG.getHammerDurabilityMultipier()),
                 ConfigProvider.CONFIG.getMiningSpeedMultiplier(id),
                 ConfigProvider.CONFIG.getAttackDamage(id),
                 ConfigProvider.CONFIG.getMiningLevel(id),
