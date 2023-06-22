@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/fabric-hammers?label=modrinth%20downloads)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/fabric-hammers?label=modrinth%20downloads)](https://modrinth.com/mod/fabric-hammers)
 # Fabric Hammers
 
 Fabric Hammers is a mod that adds hammers to the game that can mine blocks in a radius.
