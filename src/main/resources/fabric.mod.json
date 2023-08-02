@@ -15,7 +15,7 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.spysat.simplehammers.simplehammers.client.SimpleHammersClient"
+      "org.spysat.simplehammers.client.SimpleHammersClient"
     ],
     "main": [
       "org.spysat.simplehammers.SimpleHammers"

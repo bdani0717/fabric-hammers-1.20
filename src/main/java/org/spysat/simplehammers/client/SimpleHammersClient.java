@@ -1,4 +1,4 @@
-package org.spysat.simplehammers.simplehammers.client;
+package org.spysat.simplehammers.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
