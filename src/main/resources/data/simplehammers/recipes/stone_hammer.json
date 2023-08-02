@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    " SP",
+    "S  "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "simplehammers:stone_hammer",
+    "count": 1
+  }
+}
