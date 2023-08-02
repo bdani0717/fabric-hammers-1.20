@@ -3,13 +3,17 @@ package org.spysat.simplehammers;
 import net.fabricmc.api.ModInitializer;
 // import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 // import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+
+import java.util.logging.Logger;
 
 public class SimpleHammers implements ModInitializer {
 
@@ -24,6 +28,7 @@ public class SimpleHammers implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        Logger.getLogger("SimpleHammers").info(HAMMER_TAG.toString());
         //Register Items
         Registry.register(Registries.ITEM, new Identifier("simplehammers", "wooden_hammer"), WOODEN_HAMMER);
         Registry.register(Registries.ITEM, new Identifier("simplehammers", "stone_hammer"), STONE_HAMMER);
