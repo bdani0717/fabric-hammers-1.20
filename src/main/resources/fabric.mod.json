@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "simplehammers",
+  "version": "${version}",
+  "name": "Simple Hammers",
+  "description": "All manner of hammers",
+  "authors": [
+    "Ashton B."
+  ],
+  "contact": {
+    "repo": "https://github.com/ashton/simplehammers"
+  },
+  "license": "MIT",
+  "icon": "assets/simplehammers/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.spysat.simplehammers.simplehammers.client.SimpleHammersClient"
+    ],
+    "main": [
+      "org.spysat.simplehammers.SimpleHammers"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": ">=1.20",
+    "java": ">=16"
+  }
+}
