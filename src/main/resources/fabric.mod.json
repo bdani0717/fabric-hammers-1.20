@@ -26,5 +26,8 @@
     "fabric": "*",
     "minecraft": ">=1.20",
     "java": ">=16"
-  }
+  },
+  "mixins": [
+    "simplehammers.mixin.json"
+  ]
 }
