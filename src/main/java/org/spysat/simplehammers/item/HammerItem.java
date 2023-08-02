@@ -1,15 +1,13 @@
-package org.spysat.simplehammers;
+package org.spysat.simplehammers.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import org.spysat.simplehammers.SimpleHammers;
+import org.spysat.simplehammers.block.Dust;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,11 +15,12 @@ import java.util.Map;
 
 public class HammerItem extends MiningToolItem {
     public static HashMap<Block, Block> HammeringMap = new HashMap<>(
-            Map.of(
-                    Blocks.COBBLED_DEEPSLATE, Blocks.COBBLESTONE,
+            Map.of
+            (
                     Blocks.COBBLESTONE, Blocks.GRAVEL,
                     Blocks.GRAVEL, Blocks.DIRT,
                     Blocks.DIRT, Blocks.SAND
+//                  Blocks.SAND, Dust
             )
     );
 
@@ -29,7 +28,7 @@ public class HammerItem extends MiningToolItem {
         super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
     }
 
-    @Override // Hammers can mine anything that shovels and pickaxes can
+    @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
         return state.isIn(BlockTags.PICKAXE_MINEABLE) || state.isIn(BlockTags.SHOVEL_MINEABLE) ? this.miningSpeed : 1.0f;
     }

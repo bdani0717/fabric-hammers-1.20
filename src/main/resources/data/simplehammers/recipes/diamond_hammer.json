@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "P": {
-      "tag": "minecraft:planks"
+      "item": "minecraft:diamond"
     }
   },
   "result": {
-    "item": "simplehammers:wooden_hammer",
+    "item": "simplehammers:diamond_hammer",
     "count": 1
   }
 }
