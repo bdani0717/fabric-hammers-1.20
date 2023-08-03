@@ -1,29 +1,27 @@
 package org.spysat.simplehammers;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import org.slf4j.LoggerFactory;
 import org.spysat.simplehammers.item.HammerItem;
-//import org.spysat.simplehammers.registry.SHRegistry;
+import org.spysat.simplehammers.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
-
-import java.util.logging.Logger;
-
 public class SimpleHammers implements ModInitializer {
-    //Eventually, I'd like to move all the definitions of in-game items to their own class file
+
+    public static final String MOD_ID = "simplehammers";
+    public static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
     public static final TagKey<Block> HAMMERABLES = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "hammerables")); //Custom block tag
 
-    //Define items before initialisation
     public static final HammerItem WOODEN_HAMMER = new HammerItem(1.2f, -3.3f, ToolMaterials.WOOD, HAMMERABLES, new Item.Settings());
     public static final HammerItem STONE_HAMMER = new HammerItem(1.3f, -3.3f, ToolMaterials.STONE, HAMMERABLES, new Item.Settings());
     public static final HammerItem IRON_HAMMER = new HammerItem(1.5f, -3.2f, ToolMaterials.IRON, HAMMERABLES, new Item.Settings());
@@ -44,14 +42,15 @@ public class SimpleHammers implements ModInitializer {
             .build();
     @Override
     public void onInitialize() {
-        Logger.getLogger("SimpleHammers").info(HAMMERABLES.toString());
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "wooden_hammer"), WOODEN_HAMMER);
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "stone_hammer"), STONE_HAMMER);
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "iron_hammer"), IRON_HAMMER);
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "gold_hammer"), GOLD_HAMMER);
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "diamond_hammer"), DIAMOND_HAMMER);
-        Registry.register(Registries.ITEM, new Identifier("simplehammers", "netherite_hammer"), NETHERITE_HAMMER);
-        Registry.register(Registries.ITEM_GROUP, new Identifier("simplehammers", "items"), HAMMER_GROUP);
-//      SHRegistry.init();
+        LOGGER.info(HAMMERABLES.toString());
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "wooden_hammer"), WOODEN_HAMMER);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "stone_hammer"), STONE_HAMMER);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "iron_hammer"), IRON_HAMMER);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gold_hammer"), GOLD_HAMMER);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "diamond_hammer"), DIAMOND_HAMMER);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "netherite_hammer"), NETHERITE_HAMMER);
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "dust"), ModBlocks.DUST);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "dust"), new BlockItem(ModBlocks.DUST, new FabricItemSettings()));
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "id"), HAMMER_GROUP);
     }
 }

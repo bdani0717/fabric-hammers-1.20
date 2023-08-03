@@ -1,9 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:stone",
-    "#minecraft:cobblestone",
-    "#minecraft:gravel",
-    "#minecraft:sand"
+    "minecraft:stone",
+    "minecraft:cobblestone",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "simplehammers:dust"
   ]
 }

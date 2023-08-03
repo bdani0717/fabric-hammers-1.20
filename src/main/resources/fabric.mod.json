@@ -5,10 +5,10 @@
   "name": "Simple Hammers",
   "description": "All manner of hammers",
   "authors": [
-    "Ashton B"
+    "Spysat"
   ],
   "contact": {
-    "repo": "https://github.com/ashton/simplehammers"
+    "repo": "https://github.com/ashtonqlb/simplehammers"
   },
   "license": "MIT",
   "icon": "assets/simplehammers/icon.png",

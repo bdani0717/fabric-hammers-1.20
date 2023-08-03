@@ -7,21 +7,12 @@ import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import org.spysat.simplehammers.SimpleHammers;
+import org.spysat.simplehammers.block.ModBlocks;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class HammerItem extends MiningToolItem {
-    public static HashMap<Block, Block> HammeringMap = new HashMap<>(
-            Map.of
-            (
-                    Blocks.STONE, Blocks.COBBLESTONE,
-                    Blocks.COBBLESTONE, Blocks.GRAVEL,
-                    Blocks.GRAVEL, Blocks.DIRT,
-                    Blocks.DIRT, Blocks.SAND
-//                  Blocks.SAND, Dust
-            )
-    );
 
     public HammerItem(float attackDamage, float attackSpeed, ToolMaterial material, TagKey<Block> effectiveBlocks, Item.Settings settings) {
         super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
@@ -50,4 +41,16 @@ public class HammerItem extends MiningToolItem {
         }
         return 0;
     }
+
+    public static HashMap<Block, Block> HammeringMap = new HashMap<>( //Map of available interactions
+            Map.of
+                    (
+                            Blocks.STONE, Blocks.COBBLESTONE,
+                            Blocks.COBBLESTONE, Blocks.GRAVEL,
+                            Blocks.GRAVEL, Blocks.DIRT,
+                            Blocks.DIRT, Blocks.SAND,
+                            Blocks.SAND, ModBlocks.DUST,
+                            ModBlocks.DUST, ModBlocks.DUST
+                    )
+    );
 }

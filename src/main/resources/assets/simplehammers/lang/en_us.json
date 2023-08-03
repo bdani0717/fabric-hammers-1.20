@@ -15,5 +15,7 @@
   "item.simplehammers.diamond_impact_hammer"  : "Diamond Impact Hammer",
   "item.simplehammers.netherite_impact_hammer": "Netherite Impact Hammer",
 
-  "item.simplehammers.crescent_hammer"        : "Crescent Hammer"
+  "item.simplehammers.crescent_hammer"        : "Crescent Hammer",
+
+  "block.simplehammers.dust"                  : "Dust"
 }
