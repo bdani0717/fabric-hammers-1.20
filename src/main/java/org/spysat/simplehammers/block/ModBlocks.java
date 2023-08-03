@@ -14,7 +14,7 @@ import org.spysat.simplehammers.SimpleHammers;
 
 
 public class ModBlocks {
-    public static final Block DUST = registerBlock("dust", new Block(FabricBlockSettings.create().strength(0.3f).sounds(BlockSoundGroup.SAND)));
+    public static final Block DUST = registerBlock("dust", new Block(FabricBlockSettings.create().strength(0.1f).sounds(BlockSoundGroup.SAND)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
