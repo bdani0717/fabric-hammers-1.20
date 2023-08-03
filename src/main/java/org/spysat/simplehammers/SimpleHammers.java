@@ -20,16 +20,16 @@ import net.fabricmc.api.ModInitializer;
 import java.util.logging.Logger;
 
 public class SimpleHammers implements ModInitializer {
-    //Eventually, i'd like to move all the definitions of in-game items to their own class file
-    public static final TagKey<Block> HAMMER_TAG = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "hammer_tag")); //Custom block tag
+    //Eventually, I'd like to move all the definitions of in-game items to their own class file
+    public static final TagKey<Block> HAMMERABLES = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "hammerables")); //Custom block tag
 
     //Define items before initialisation
-    public static final HammerItem WOODEN_HAMMER = new HammerItem(1.2f, -3.3f, ToolMaterials.WOOD, HAMMER_TAG, new Item.Settings());
-    public static final HammerItem STONE_HAMMER = new HammerItem(1.3f, -3.3f, ToolMaterials.STONE, HAMMER_TAG, new Item.Settings());
-    public static final HammerItem IRON_HAMMER = new HammerItem(1.5f, -3.2f, ToolMaterials.IRON, HAMMER_TAG, new Item.Settings());
-    public static final HammerItem GOLD_HAMMER = new HammerItem(1.2f, -3.0f, ToolMaterials.GOLD, HAMMER_TAG, new Item.Settings());
-    public static final HammerItem DIAMOND_HAMMER = new HammerItem(1.5f, -3.1f, ToolMaterials.DIAMOND, HAMMER_TAG, new Item.Settings());
-    public static final HammerItem NETHERITE_HAMMER = new HammerItem(1.6f, -3.1f, ToolMaterials.NETHERITE, HAMMER_TAG, new Item.Settings().fireproof());
+    public static final HammerItem WOODEN_HAMMER = new HammerItem(1.2f, -3.3f, ToolMaterials.WOOD, HAMMERABLES, new Item.Settings());
+    public static final HammerItem STONE_HAMMER = new HammerItem(1.3f, -3.3f, ToolMaterials.STONE, HAMMERABLES, new Item.Settings());
+    public static final HammerItem IRON_HAMMER = new HammerItem(1.5f, -3.2f, ToolMaterials.IRON, HAMMERABLES, new Item.Settings());
+    public static final HammerItem GOLD_HAMMER = new HammerItem(1.2f, -3.0f, ToolMaterials.GOLD, HAMMERABLES, new Item.Settings());
+    public static final HammerItem DIAMOND_HAMMER = new HammerItem(1.5f, -3.1f, ToolMaterials.DIAMOND, HAMMERABLES, new Item.Settings());
+    public static final HammerItem NETHERITE_HAMMER = new HammerItem(1.6f, -3.1f, ToolMaterials.NETHERITE, HAMMERABLES, new Item.Settings().fireproof());
     public static final ItemGroup HAMMER_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(DIAMOND_HAMMER))
             .displayName(Text.translatable("itemGroup.simpleHammers.items"))
@@ -44,7 +44,7 @@ public class SimpleHammers implements ModInitializer {
             .build();
     @Override
     public void onInitialize() {
-        Logger.getLogger("SimpleHammers").info(HAMMER_TAG.toString());
+        Logger.getLogger("SimpleHammers").info(HAMMERABLES.toString());
         Registry.register(Registries.ITEM, new Identifier("simplehammers", "wooden_hammer"), WOODEN_HAMMER);
         Registry.register(Registries.ITEM, new Identifier("simplehammers", "stone_hammer"), STONE_HAMMER);
         Registry.register(Registries.ITEM, new Identifier("simplehammers", "iron_hammer"), IRON_HAMMER);

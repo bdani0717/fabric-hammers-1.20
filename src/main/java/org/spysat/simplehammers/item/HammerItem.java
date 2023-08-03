@@ -7,9 +7,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import org.spysat.simplehammers.SimpleHammers;
-import org.spysat.simplehammers.block.Dust;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +15,7 @@ public class HammerItem extends MiningToolItem {
     public static HashMap<Block, Block> HammeringMap = new HashMap<>(
             Map.of
             (
+                    Blocks.STONE, Blocks.COBBLESTONE,
                     Blocks.COBBLESTONE, Blocks.GRAVEL,
                     Blocks.GRAVEL, Blocks.DIRT,
                     Blocks.DIRT, Blocks.SAND
@@ -35,7 +34,7 @@ public class HammerItem extends MiningToolItem {
 
     @Override
     public boolean isSuitableFor(BlockState state) { //Check the tool material to compare whether it can be mined by the hammer
-        if (state.isIn(SimpleHammers.HAMMER_TAG)) {
+        if (state.isIn(SimpleHammers.HAMMERABLES)) {
             return this.getMaterial().getMiningLevel() >= getMiningLevel(state);
         }
         return false;
