@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " P ",
-    " SP",
-    "S  "
+    " I ",
+    " HI",
+    "S "
   ],
   "key": {
     "S": {
       "item": "minecraft:stick"
     },
-    "P": {
-      "item": "minecraft:cobblestone"
+    "H": {
+      "item": "simplehammers:wooden_hammer"
+    },
+    "I": {
+      "tag": "minecraft:logs"
     }
   },
   "result": {

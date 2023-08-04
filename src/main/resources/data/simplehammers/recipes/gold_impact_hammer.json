@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:string"
+  },
+  "base": {
+    "item": "simplehammers:gold_hammer"
+  },
+  "addition": {
+    "item": "minecraft:gold_block"
+  },
+  "result": {
+    "item": "simplehammers:gold_impact_hammer"
+  }
+}
