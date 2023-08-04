@@ -4,9 +4,12 @@
   "package": "org.spysat.simplehammers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BlockHarvestMixin"
+    "BlockHarvestMixin",
+    "ServerPlayerInteractionManagerMixin"
   ],
-  "client": [],
+  "client": [
+    "WorldRendererMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

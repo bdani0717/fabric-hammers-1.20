@@ -19,6 +19,10 @@
     ],
     "main": [
       "org.spysat.simplehammers.SimpleHammers"
+    ],
+    "jade": [
+      "snownee.jade.addon.vanilla.VanillaPlugin",
+      "snownee.jade.addon.universal.UniversalPlugin"
     ]
   },
   "depends": {

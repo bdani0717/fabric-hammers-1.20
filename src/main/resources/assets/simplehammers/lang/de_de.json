@@ -1,0 +1,22 @@
+{
+    "itemGroup.simpleHammers.items": "Einfache Hämmer",
+  
+    "item.simplehammers.wooden_hammer": "Holzhammer",
+    "item.simplehammers.stone_hammer": "Steinhammer",
+    "item.simplehammers.iron_hammer": "Eisenhammer",
+    "item.simplehammers.gold_hammer": "Goldhammer",
+    "item.simplehammers.diamond_hammer": "Diamanthammer",
+    "item.simplehammers.netherite_hammer": "Netherithammer",
+  
+    "item.simplehammers.wooden_impact_hammer": "Holz-Impact-Hammer",
+    "item.simplehammers.stone_impact_hammer": "Stein-Impact-Hammer",
+    "item.simplehammers.iron_impact_hammer": "Eisen-Impact-Hammer",
+    "item.simplehammers.gold_impact_hammer": "Gold-Impact-Hammer",
+    "item.simplehammers.diamond_impact_hammer": "Diamant-Impact-Hammer",
+    "item.simplehammers.netherite_impact_hammer": "Netherit-Impact-Hammer",
+  
+    "item.simplehammers.crescent_hammer": "Halbmond-Hammer",
+  
+    "block.simplehammers.dust": "Staub"
+  }
+  

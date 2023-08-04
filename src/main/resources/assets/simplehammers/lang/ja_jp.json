@@ -1,0 +1,21 @@
+{
+  "itemGroup.simpleHammers.items": "シンプルハンマー",
+
+  "item.simplehammers.wooden_hammer": "木製ハンマー",
+  "item.simplehammers.stone_hammer": "石ハンマー",
+  "item.simplehammers.iron_hammer": "鉄ハンマー",
+  "item.simplehammers.gold_hammer": "金ハンマー",
+  "item.simplehammers.diamond_hammer": "ダイヤモンドハンマー",
+  "item.simplehammers.netherite_hammer": "ネザライトハンマー",
+
+  "item.simplehammers.wooden_impact_hammer": "木製インパクトハンマー",
+  "item.simplehammers.stone_impact_hammer": "石インパクトハンマー",
+  "item.simplehammers.iron_impact_hammer": "鉄インパクトハンマー",
+  "item.simplehammers.gold_impact_hammer": "金インパクトハンマー",
+  "item.simplehammers.diamond_impact_hammer": "ダイヤモンドインパクトハンマー",
+  "item.simplehammers.netherite_impact_hammer": "ネザライトインパクトハンマー",
+
+  "item.simplehammers.crescent_hammer": "クレセントハンマー",
+
+  "block.simplehammers.dust": "ほこり"
+}
