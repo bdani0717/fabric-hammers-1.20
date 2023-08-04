@@ -5,7 +5,7 @@ import java.util.Map;
 
 @SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal", "MismatchedQueryAndUpdateOfCollection", "unused"})
 public class Config {
-    private class HammerConfig {
+    private static class HammerConfig {
         private int durability;
         private int miningRadius;
         private float miningSpeedMultiplier;
