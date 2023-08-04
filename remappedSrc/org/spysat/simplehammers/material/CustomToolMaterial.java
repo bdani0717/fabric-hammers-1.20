@@ -48,7 +48,7 @@ public class CustomToolMaterial implements ToolMaterial {
 
     public static CustomToolMaterial fromConfig(String id) {
         return new CustomToolMaterial(
-                (int)(ConfigProvider.CONFIG.getDurability(id) * ConfigProvider.CONFIG.getHammerDurabilityModifier()),
+                (int)(ConfigProvider.CONFIG.getDurability(id) * ConfigProvider.CONFIG.getHammerDurabilityMultipier()),
                 ConfigProvider.CONFIG.getMiningSpeedMultiplier(id),
                 ConfigProvider.CONFIG.getAttackDamage(id),
                 ConfigProvider.CONFIG.getMiningLevel(id),

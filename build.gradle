@@ -33,9 +33,12 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "curse.maven:jade-324717:4678846"
-    modCompileOnlyApi("mezz.jei:jei-${project.minecraft_version}-common-api:15.2.0.23")
-    modCompileOnlyApi("mezz.jei:jei-${project.minecraft_version}-fabric-api:15.2.0.23")
+    // Jade API, for Hammerability plugin
+    modImplementation "curse.maven:jade-324717:${project.jade_version}"
+    // compile against the JEI API but do not include it at runtime
+    modImplementation("mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}") {
+        exclude(group: "mezz.jei")  // Fix mappings issue caused by MojMap
+    }
 }
 
 processResources {

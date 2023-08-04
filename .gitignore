@@ -116,3 +116,7 @@ run/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+
+
+# Exclude potentially copyright infringing temporary assets before I can get real artwork done.
+src/main/resources/assets/simplehammers/textures/item

@@ -22,8 +22,10 @@
       "org.spysat.simplehammers.SimpleHammers"
     ],
     "jade": [
-      "snownee.jade.addon.vanilla.VanillaPlugin",
-      "snownee.jade.addon.universal.UniversalPlugin"
+      "org.spysat.simplehammers.integration.jade.SimpleHammersPlugin"
+    ],
+    "jei_mod_plugin": [
+      "org.spysat.simplehammers.integration.jei.SimpleHammersPlugin"
     ]
   },
   "depends": {
