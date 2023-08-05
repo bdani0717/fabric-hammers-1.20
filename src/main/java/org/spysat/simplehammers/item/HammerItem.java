@@ -13,7 +13,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.SimpleHammers;
 import org.spysat.simplehammers.block.ModBlocks;
-import org.spysat.simplehammers.material.VanillaToolMaterial;
+import org.spysat.simplehammers.material.CustomToolMaterial;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class HammerItem extends MiningToolItem {
     public static final TagKey<Block> MINEABLE_WITH_HAMMER = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "mineable_with_hammer.json")); //Custom block tag
 
     public HammerItem(String id) {
-        super(1, -3.2F,  VanillaToolMaterial.fromConfig(id), MINEABLE_WITH_HAMMER, new Settings());
+        super(1, -3.2F,  CustomToolMaterial.materialFromConfig(id), MINEABLE_WITH_HAMMER, new Settings());
     }
 
     @Override

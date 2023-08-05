@@ -30,9 +30,9 @@ public class ImpactHammerItem extends PickaxeItem implements AoeTool {
     // Constructor for HammerItem class.
     public ImpactHammerItem(String id) {
         // Calling the superclass constructor (PickaxeItem) with a custom tool material, mining speed, and attack damage.
-        super(CustomToolMaterial.fromConfig(id), 1, -3.2F, new Settings());
+        super(CustomToolMaterial.impactMaterialFromConfig(id), 1, -3.2F, new Settings());
         // Initializing the mining radius by getting the value from the configuration.
-        this.miningRadius = ConfigProvider.CONFIG.getMiningRadius(id);
+        this.miningRadius = ConfigProvider.CONFIG.getImpactMiningRadius(id);
     }
 
     // A utility method to register a hammer item.

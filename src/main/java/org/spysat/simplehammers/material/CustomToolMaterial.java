@@ -46,14 +46,25 @@ public class CustomToolMaterial implements ToolMaterial {
         this.repairIngredient = Ingredient.ofItems(Registries.ITEM.get(new Identifier(repairIngredient)));
     }
 
-    public static CustomToolMaterial fromConfig(String id) {
+    public static CustomToolMaterial materialFromConfig(String id) {
         return new CustomToolMaterial(
-                (int)(ConfigProvider.CONFIG.getDurability(id) * ConfigProvider.CONFIG.getHammerDurabilityModifier()),
-                ConfigProvider.CONFIG.getMiningSpeedMultiplier(id),
+                ConfigProvider.CONFIG.getDurability(id),
+                ConfigProvider.CONFIG.getAttackSpeed(id),
                 ConfigProvider.CONFIG.getAttackDamage(id),
                 ConfigProvider.CONFIG.getMiningLevel(id),
                 ConfigProvider.CONFIG.getEnchantability(id),
-                Ingredient.ofItems(Registries.ITEM.get(new Identifier(ConfigProvider.CONFIG.getRepairIngredient(id))))
+                Ingredient.ofItems(Registries.ITEM.get(new Identifier(ConfigProvider.CONFIG.getImpactRepairIngredient(id))))
+        );
+    }
+
+    public static CustomToolMaterial impactMaterialFromConfig(String id) {
+        return new CustomToolMaterial(
+                (int)(ConfigProvider.CONFIG.getImpactDurability(id) * ConfigProvider.CONFIG.getImpactHammerDurabilityModifier()),
+                ConfigProvider.CONFIG.getImpactMiningSpeedMultiplier(id),
+                ConfigProvider.CONFIG.getImpactAttackDamage(id),
+                ConfigProvider.CONFIG.getImpactMiningLevel(id),
+                ConfigProvider.CONFIG.getImpactEnchantability(id),
+                Ingredient.ofItems(Registries.ITEM.get(new Identifier(ConfigProvider.CONFIG.getImpactRepairIngredient(id))))
         );
     }
 
