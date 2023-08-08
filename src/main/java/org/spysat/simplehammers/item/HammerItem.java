@@ -1,7 +1,5 @@
 package org.spysat.simplehammers.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -17,7 +15,6 @@ import org.spysat.simplehammers.block.ModBlocks;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class HammerItem extends MiningToolItem {
 
