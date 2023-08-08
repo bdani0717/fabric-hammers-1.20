@@ -1,5 +1,7 @@
 package org.spysat.simplehammers.item;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -12,21 +14,24 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.SimpleHammers;
 import org.spysat.simplehammers.block.ModBlocks;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class HammerItem extends MiningToolItem {
 
     public static final TagKey<Block> HAMMERABLES = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "hammerables")); //Custom block tag
-    public static final Item WOODEN_HAMMER = registerItem("wooden_hammer", new HammerItem(1.2f, -3.3f, ToolMaterials.WOOD, HAMMERABLES, new Item.Settings()));
-    public static final Item STONE_HAMMER = registerItem("stone_hammer", new HammerItem(1.3f, -3.3f, ToolMaterials.STONE, HAMMERABLES, new Item.Settings()));
-    public static final Item IRON_HAMMER = registerItem("iron_hammer", new HammerItem(1.5f, -3.2f, ToolMaterials.IRON, HAMMERABLES, new Item.Settings()));
-    public static final Item GOLD_HAMMER = registerItem("gold_hammer", new HammerItem(1.2f, -3.0f, ToolMaterials.GOLD, HAMMERABLES, new Item.Settings()));
-    public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer", new HammerItem(1.5f, -3.1f, ToolMaterials.DIAMOND, HAMMERABLES, new Item.Settings()));
-    public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer", new HammerItem(1.6f, -3.1f, ToolMaterials.NETHERITE, HAMMERABLES, new Item.Settings().fireproof()));
 
-    public HammerItem(float attackDamage, float attackSpeed, ToolMaterial material, TagKey<Block> effectiveBlocks, Item.Settings settings) {
-        super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
+    public static Item WOODEN_HAMMER = registerHammer("wooden_hammer", new HammerItem(ToolMaterials.WOOD, 3, 2, HAMMERABLES, new Item.Settings()));
+    public static Item STONE_HAMMER = registerHammer("stone_hammer", new HammerItem(ToolMaterials.STONE, 3, 2, HAMMERABLES, new Item.Settings()));
+    public static Item IRON_HAMMER = registerHammer("iron_hammer", new HammerItem(ToolMaterials.IRON, 3, 2, HAMMERABLES, new Item.Settings()));
+    public static Item GOLD_HAMMER = registerHammer("gold_hammer", new HammerItem(ToolMaterials.GOLD, 3, 2, HAMMERABLES, new Item.Settings()));
+    public static Item DIAMOND_HAMMER = registerHammer("diamond_hammer", new HammerItem(ToolMaterials.DIAMOND, 3, 2, HAMMERABLES, new Item.Settings()));
+    public static Item NETHERITE_HAMMER = registerHammer("netherite_hammer", new HammerItem(ToolMaterials.NETHERITE, 3, 2, HAMMERABLES, new Item.Settings()));
+
+    public HammerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, TagKey<Block> effectiveBlocks, Settings settings) {
+        super(attackDamage, attackSpeed, toolMaterial, effectiveBlocks, settings);
     }
 
     @Override
@@ -65,11 +70,11 @@ public class HammerItem extends MiningToolItem {
                     )
     );
 
-    private static Item registerItem(String name, HammerItem item) {
+    private static Item registerHammer(String name, HammerItem item) {
         return Registry.register(Registries.ITEM, new Identifier(SimpleHammers.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        SimpleHammers.LOGGER.info("Registering Mod Items for " + SimpleHammers.MOD_ID);
+        SimpleHammers.LOGGER.info("Registering Hammer items...");
     }
 }
