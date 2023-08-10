@@ -1,0 +1,22 @@
+{
+    "itemGroup.simpleHammers.items": "Martillos Simples",
+  
+    "item.simplehammers.wooden_hammer": "Martillo de Madera",
+    "item.simplehammers.stone_hammer": "Martillo de Piedra",
+    "item.simplehammers.iron_hammer": "Martillo de Hierro",
+    "item.simplehammers.gold_hammer": "Martillo Dorado",
+    "item.simplehammers.diamond_hammer": "Martillo de Diamante",
+    "item.simplehammers.netherite_hammer": "Martillo de Netherita",
+  
+    "item.simplehammers.wooden_impact_hammer": "Martillo de Impacto de Madera",
+    "item.simplehammers.stone_impact_hammer": "Martillo de Impacto de Piedra",
+    "item.simplehammers.iron_impact_hammer": "Martillo de Impacto de Hierro",
+    "item.simplehammers.gold_impact_hammer": "Martillo de Impacto Dorado",
+    "item.simplehammers.diamond_impact_hammer": "Martillo de Impacto de Diamante",
+    "item.simplehammers.netherite_impact_hammer": "Martillo de Impacto de Netherita",
+  
+    "item.simplehammers.crescent_hammer": "Martillo Crescente",
+  
+    "block.simplehammers.dust": "Polvo"
+  }
+  

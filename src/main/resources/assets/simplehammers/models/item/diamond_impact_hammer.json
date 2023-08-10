@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "simplehammers:item/diamond_impact_hammer"
+  }
+}
