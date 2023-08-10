@@ -45,7 +45,7 @@ dependencies {
     }
 
     //Magna, the AoE tool API for Fabric. Needed for Impact Hammer functionality
-    include "com.github.GabrielOlvH:magna:${magna_version}"
+    include "com.github.GabrielOlvH:magna:${magna_version}" //Thank you to
     modImplementation ("com.github.GabrielOlvH:magna:${magna_version}") {
         exclude group: "net.fabricmc"
         exclude group: "com.jamieswhiteshirt"

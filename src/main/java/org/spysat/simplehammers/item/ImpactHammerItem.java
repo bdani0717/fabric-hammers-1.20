@@ -11,8 +11,7 @@ import org.spysat.simplehammers.SimpleHammers;
 
 public class ImpactHammerItem extends HammerItem {
 
-    public static Item STONE_IMPACT_HAMMER = registerImpactHammer("stone_impact_hammer", new ImpactHammerItem(ToolMaterials.WOOD, 3, 0.57F, new Item.Settings(), 1));
-    public static Item COPPER_IMPACT_HAMMER = registerImpactHammer("copper_impact_hammer", new ImpactHammerItem(ToolMaterials.STONE, 3, 1.15F, new Item.Settings(), 1));
+    public static Item STONE_IMPACT_HAMMER = registerImpactHammer("copper_impact_hammer", new ImpactHammerItem(ToolMaterials.STONE, 3, 1.15F, new Item.Settings(), 1));
     public static Item IRON_IMPACT_HAMMER = registerImpactHammer("iron_impact_hammer", new ImpactHammerItem(ToolMaterials.IRON, 3, 1.7F, new Item.Settings(), 1));
     public static Item GOLD_IMPACT_HAMMER = registerImpactHammer("gold_impact_hammer", new ImpactHammerItem(ToolMaterials.GOLD, 3, 3.5F, new Item.Settings(), 1));
     public static Item DIAMOND_IMPACT_HAMMER = registerImpactHammer("diamond_impact_hammer", new ImpactHammerItem(ToolMaterials.DIAMOND, 3, 2.3F, new Item.Settings(), 2));

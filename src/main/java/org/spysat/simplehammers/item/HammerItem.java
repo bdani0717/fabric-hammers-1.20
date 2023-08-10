@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class HammerItem extends MiningToolItem {
 
-    public static final TagKey<Block> HAMMERABLES = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "hammerables")); //Custom block tag
+    public static final TagKey<Block> HAMMERABLES = TagKey.of(RegistryKeys.BLOCK, new Identifier("simplehammers", "mineable_with_hammer")); //Custom block tag
 
     public static Item WOODEN_HAMMER = registerHammer("wooden_hammer", new HammerItem(ToolMaterials.WOOD, 3, 2, HAMMERABLES, new Item.Settings()));
     public static Item STONE_HAMMER = registerHammer("stone_hammer", new HammerItem(ToolMaterials.STONE, 3, 2, HAMMERABLES, new Item.Settings()));
@@ -62,8 +62,7 @@ public class HammerItem extends MiningToolItem {
                             Blocks.COBBLESTONE, Blocks.GRAVEL,
                             Blocks.GRAVEL, Blocks.DIRT,
                             Blocks.DIRT, Blocks.SAND,
-                            Blocks.SAND, ModBlocks.DUST,
-                            ModBlocks.DUST, ModBlocks.DUST
+                            Blocks.SAND, ModBlocks.DUST
                     )
     );
 
@@ -74,4 +73,6 @@ public class HammerItem extends MiningToolItem {
     public static void registerModItems() {
         SimpleHammers.LOGGER.info("Registering Hammer items...");
     }
+
+    //TODO: Move Item definitions to their own file. I keep looping back around to defining them in-file. Is this bad mod behaviour? maybe.
 }

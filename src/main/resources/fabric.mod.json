@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "simplehammers",
-  "version": "${version}",
+  "version": "0.8",
   "name": "Simple Hammers",
-  "description": "All manner of hammers",
+  "description": "All manner of hammers!",
   "authors": [
-    "Spysat",
+    "spysat",
     "CanadianBaconBoi"
   ],
   "contact": {
@@ -20,6 +20,12 @@
     ],
     "main": [
       "org.spysat.simplehammers.SimpleHammers"
+    ],
+    "jade": [
+      "org.spysat.simplehammers.integration.jade.SimpleHammersPlugin"
+    ],
+    "jei_mod_plugin": [
+      "org.spysat.simplehammers.integration.jei.SimpleHammersPlugin"
     ]
   },
   "depends": {

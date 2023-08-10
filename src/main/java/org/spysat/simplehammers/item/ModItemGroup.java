@@ -25,7 +25,6 @@ public class ModItemGroup {
                 entries.add(HammerItem.NETHERITE_HAMMER);
 
                 entries.add(ImpactHammerItem.STONE_IMPACT_HAMMER);
-                entries.add(ImpactHammerItem.COPPER_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.IRON_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.GOLD_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.DIAMOND_IMPACT_HAMMER);

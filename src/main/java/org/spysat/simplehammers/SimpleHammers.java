@@ -22,5 +22,7 @@ public class SimpleHammers implements ModInitializer {
         HammerItem.registerModItems();
         ImpactHammerItem.registerModItems();
         ModBlocks.registerModBlocks();
+
+        //TODO: Add JEI plugin for Hammering recipes by reading the HammeringMap and Jade plugin for Hammerability of blocks by reading the hammerables block tags
     }
 }

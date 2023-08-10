@@ -2,15 +2,13 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
-      "conditions": [],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "simplehammers_dust"
+          "name": "simplehammers:dust"
         }
-      ],
-      "rolls": 1.0
+      ]
     }
   ]
 }
