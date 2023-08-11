@@ -21,9 +21,6 @@
     "main": [
       "org.spysat.simplehammers.SimpleHammers"
     ],
-    "jade": [
-      "org.spysat.simplehammers.integration.jade.SimpleHammersPlugin"
-    ],
     "jei_mod_plugin": [
       "org.spysat.simplehammers.integration.jei.SimpleHammersPlugin"
     ]

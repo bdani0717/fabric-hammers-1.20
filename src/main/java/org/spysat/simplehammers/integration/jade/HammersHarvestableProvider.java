@@ -28,12 +28,13 @@ import snownee.jade.util.CommonProxy;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 import static org.spysat.simplehammers.item.HammerItem.*;
 
 //TODO: Fix the bug where Hammer icons don't show up properly
-public enum HarvestToolProvider implements IBlockComponentProvider, SynchronousResourceReloader {
+public enum HammersHarvestableProvider implements IBlockComponentProvider, SynchronousResourceReloader {
     INSTANCE;
 
     public static final Cache<BlockState, ImmutableList<ItemStack>> resultCache = CacheBuilder.newBuilder().expireAfterAccess(5, TimeUnit.MINUTES).build();
@@ -110,19 +111,19 @@ public enum HarvestToolProvider implements IBlockComponentProvider, SynchronousR
             return List.of(); // Return an empty list if no relevant information is needed
         }
         //Why do these tooltips not show up?
-        List<ItemStack> tools = List.of(new ItemStack(WOODEN_HAMMER), new ItemStack(STONE_HAMMER), new ItemStack(IRON_HAMMER), new ItemStack(GOLD_HAMMER), new ItemStack(DIAMOND_HAMMER), new ItemStack(NETHERITE_HAMMER)); // Initialize the list of tools
-//
-//        try {
-//            // Attempt to fetch tools from the cache or compute and cache them
-//            tools = resultCache.get(state, () -> getTool(state, accessor.getLevel(), accessor.getPosition()));
-//        } catch (ExecutionException e) {
-//            e.printStackTrace(); // Print the exception stack trace in case of an error
-//        }
-//
-//        // If no suitable tools were found, return an empty list
-//        if (tools.isEmpty()) {
-//            return List.of();
-//        }
+        List<ItemStack> tools = List.of(); // Initialize the list of tools
+
+        try {
+            // Attempt to fetch tools from the cache or compute and cache them
+            tools = resultCache.get(state, () -> getTool(state, accessor.getLevel(), accessor.getPosition()));
+        } catch (ExecutionException e) {
+            e.printStackTrace(); // Print the exception stack trace in case of an error
+        }
+
+        // If no suitable tools were found, return an empty list
+        if (tools.isEmpty()) {
+            return List.of();
+        }
 
         int offsetY = 0;
 

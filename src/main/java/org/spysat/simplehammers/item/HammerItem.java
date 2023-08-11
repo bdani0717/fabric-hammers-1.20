@@ -2,7 +2,6 @@ package org.spysat.simplehammers.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,10 +10,6 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.SimpleHammers;
-import org.spysat.simplehammers.block.ModBlocks;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class HammerItem extends MiningToolItem {
 

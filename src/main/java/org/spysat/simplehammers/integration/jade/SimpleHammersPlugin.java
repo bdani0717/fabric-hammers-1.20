@@ -17,7 +17,7 @@ public class SimpleHammersPlugin implements IWailaPlugin {
         CLIENT_REGISTRATION = registration;
 
         registration.addConfig(Identifiers.MC_EFFECTIVE_TOOL, true);
-        registration.registerBlockComponent(HarvestToolProvider.INSTANCE, Block.class);
-        ClientProxy.registerReloadListener(HarvestToolProvider.INSTANCE);
+        registration.registerBlockComponent(HammersHarvestableProvider.INSTANCE, Block.class);
+        ClientProxy.registerReloadListener(HammersHarvestableProvider.INSTANCE);
     }
 }

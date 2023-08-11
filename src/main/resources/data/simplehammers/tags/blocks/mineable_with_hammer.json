@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "minecraft:tuff",
+    "minecraft:basalt",
+    "minecraft:granite",
+    "minecraft:dripstone",
+    "minecraft:smooth_stone",
     "minecraft:stone",
     "minecraft:cobblestone",
     "minecraft:dirt",
