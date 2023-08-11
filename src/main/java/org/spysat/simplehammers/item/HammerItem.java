@@ -55,17 +55,6 @@ public class HammerItem extends MiningToolItem {
         return 0;
     }
 
-    public static HashMap<Block, Block> HammeringMap = new HashMap<>( //Map of available interactions. Maybe rewrite this section so that it can be configured by a .json file.
-            Map.of
-                    (
-                            Blocks.STONE, Blocks.COBBLESTONE,
-                            Blocks.COBBLESTONE, Blocks.GRAVEL,
-                            Blocks.GRAVEL, Blocks.DIRT,
-                            Blocks.DIRT, Blocks.SAND,
-                            Blocks.SAND, ModBlocks.DUST
-                    )
-    );
-
     private static Item registerHammer(String name, HammerItem item) {
         return Registry.register(Registries.ITEM, new Identifier(SimpleHammers.MOD_ID, name), item);
     }
@@ -75,4 +64,5 @@ public class HammerItem extends MiningToolItem {
     }
 
     //TODO: Move Item definitions to their own file. I keep looping back around to defining them in-file. Is this bad mod behaviour? maybe.
+    //TODO: Get the wife to draw some custom Hammer icons.
 }

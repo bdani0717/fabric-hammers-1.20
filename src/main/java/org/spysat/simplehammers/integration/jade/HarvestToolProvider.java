@@ -28,12 +28,11 @@ import snownee.jade.util.CommonProxy;
 
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 import static org.spysat.simplehammers.item.HammerItem.*;
-import static org.spysat.simplehammers.item.ModItemGroup.HAMMER_GROUP;
 
+//TODO: Fix the bug where Hammer icons don't show up properly
 public enum HarvestToolProvider implements IBlockComponentProvider, SynchronousResourceReloader {
     INSTANCE;
 

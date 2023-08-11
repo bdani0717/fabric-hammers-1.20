@@ -5,13 +5,9 @@ import mezz.jei.api.registration.IGuiHandlerRegistration;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 import org.spysat.simplehammers.SimpleHammers;
-import org.spysat.simplehammers.item.ModItemGroup;
-
-import java.util.HashSet;
 
 public class SimpleHammersPlugin implements IModPlugin {
     public static final @NotNull Identifier SIMPLEHAMMERS_JEI = new @NotNull Identifier(SimpleHammers.MOD_ID, "jei");
