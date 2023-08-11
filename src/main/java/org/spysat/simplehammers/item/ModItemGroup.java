@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.SimpleHammers;
 import org.spysat.simplehammers.block.ModBlocks;
 
-public class ModItemGroups {
+public class ModItemGroup {
     public static final ItemGroup HAMMER_GROUP =  Registry.register(Registries.ITEM_GROUP, new Identifier(SimpleHammers.MOD_ID, "items"),
             FabricItemGroup.builder()
             .icon(() -> new ItemStack(HammerItem.DIAMOND_HAMMER))
@@ -24,7 +24,6 @@ public class ModItemGroups {
                 entries.add(HammerItem.DIAMOND_HAMMER);
                 entries.add(HammerItem.NETHERITE_HAMMER);
 
-                entries.add(ImpactHammerItem.WOODEN_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.STONE_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.IRON_IMPACT_HAMMER);
                 entries.add(ImpactHammerItem.GOLD_IMPACT_HAMMER);

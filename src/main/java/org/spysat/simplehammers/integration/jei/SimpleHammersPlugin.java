@@ -1,29 +1,21 @@
 package org.spysat.simplehammers.integration.jei;
 
 import mezz.jei.api.IModPlugin;
-import mezz.jei.api.registration.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier; //alternative for resource.ResourceLoader
+import mezz.jei.api.registration.IGuiHandlerRegistration;
+import mezz.jei.api.registration.IRecipeCatalystRegistration;
+import mezz.jei.api.registration.IRecipeCategoryRegistration;
+import mezz.jei.api.registration.IRecipeRegistration;
+import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 import org.spysat.simplehammers.SimpleHammers;
-import org.spysat.simplehammers.item.HammerItem;
-import org.spysat.simplehammers.item.ModItemGroups;
-
-import java.util.HashSet;
 
 public class SimpleHammersPlugin implements IModPlugin {
     public static final @NotNull Identifier SIMPLEHAMMERS_JEI = new @NotNull Identifier(SimpleHammers.MOD_ID, "jei");
 
-    public static HashSet<ItemGroup> HAMMERS = new HashSet<>() {
-
-    };
-
-
-        /**
-         * The unique ID for this mod plugin.
-         * The namespace should be your mod's modId.
-         */
+    /**
+     * The unique ID for this mod plugin.
+     * The namespace should be your mod's modId.
+     */
     @Override
     public @NotNull Identifier getPluginUid() {
         return SIMPLEHAMMERS_JEI;

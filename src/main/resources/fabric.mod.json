@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "simplehammers",
-  "version": "${version}",
+  "version": "0.8",
   "name": "Simple Hammers",
-  "description": "All manner of hammers",
+  "description": "All manner of hammers!",
   "authors": [
-    "Spysat",
+    "spysat",
     "CanadianBaconBoi"
   ],
   "contact": {
