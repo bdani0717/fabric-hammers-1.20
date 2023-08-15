@@ -23,7 +23,7 @@ public class SimpleHammersPlugin implements IModPlugin {
 
     /**
      * Register the categories handled by this plugin.
-     * These are registered before recipes so they can be checked for validity.
+     * These are registered before recipes, so they can be checked for validity.
      *
      * @param registration
      */

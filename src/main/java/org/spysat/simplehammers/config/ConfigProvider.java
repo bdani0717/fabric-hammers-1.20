@@ -8,6 +8,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import org.spysat.simplehammers.SimpleHammers;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,8 +30,8 @@ public class ConfigProvider {
 
                 // Create and save a default configuration
                 String json = GSON.toJson(JsonParser.parseString(GSON.toJson(new Config())));
-                try (PrintWriter out = new PrintWriter(configFile)) {
-                    out.println(json);
+                try (FileWriter out = new FileWriter(configFile)) {
+                    out.write(json);
                 }
 
                 // Set CONFIG to the default configuration

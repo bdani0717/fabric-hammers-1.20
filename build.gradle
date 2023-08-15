@@ -19,11 +19,6 @@ repositories {
         url = "https://maven.blamejared.com/"
     }
     maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.dev"
-    }
-    maven {
         name = "jitpack.io"
         url = "https://jitpack.io"
     }
@@ -37,18 +32,17 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    // Jade API, for Hammerability plugin
-    modImplementation "curse.maven:jade-324717:${project.jade_version}"
-    // compile against the JEI API but do not include it at runtime
-    modImplementation("mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}") {
-        exclude(group: "mezz.jei")  // Fix mappings issue caused by MojMap
-    }
 
     //Magna, the AoE tool API for Fabric. Needed for Impact Hammer functionality
-    include "com.github.GabrielOlvH:magna:${magna_version}" //Thank you to
+    include "com.github.GabrielOlvH:magna:${magna_version}"
     modImplementation ("com.github.GabrielOlvH:magna:${magna_version}") {
         exclude group: "net.fabricmc"
         exclude group: "com.jamieswhiteshirt"
         exclude group: "me.shedaniel.cloth"
+    }
+
+    // compile against the JEI API but do not include it at runtime
+    modImplementation("mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}") {
+        exclude(group: "mezz.jei")  // Fix mappings issue caused by MojMap
     }
 }

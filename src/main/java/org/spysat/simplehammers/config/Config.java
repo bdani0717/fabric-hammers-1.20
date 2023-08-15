@@ -2,6 +2,7 @@ package org.spysat.simplehammers.config;
 
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -9,20 +10,15 @@ import static net.minecraft.registry.Registries.BLOCK;
 
 @SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal", "MismatchedQueryAndUpdateOfCollection", "unused"})
 public class Config {
-    private class HammerConfig {
-        public class Recipe {
-            private String input;
-            private String output;
+    private class HammerRecipeConfig {
+        private HashMap<String, String> recipeList;
+        public HammerRecipeConfig(HashMap<String, String> recipeList) {
+            this.recipeList = recipeList;
         }
 
-        public HammerConfig(HashMap<String, String> recipeList, float miningSpeedMultiplier) {
-            HammerConfig.recipeList = recipeList;
-            this.miningSpeedMultiplier = miningSpeedMultiplier;
-        }
+        public HammerRecipeConfig() {}
 
-        public HammerConfig() {}
-
-        private static HashMap<String, String> recipeList = new HashMap<>() {{
+        private static HashMap<String, String> defaultRecipeList = new HashMap<>() {{
             put("minecraft:tuff", "minecraft:basalt");
             put("minecraft:granite", "minecraft:dripstone");
             put("minecraft:smooth_stone", "minecraft:stone");
@@ -33,24 +29,23 @@ public class Config {
             put("minecraft:sand", "simplehammers:dust");
         }};
 
-        HashMap<String, String> tempRecipeList = recipeList;
-
-        private float miningSpeedMultiplier;
-
-
-        public static HashMap<Block, Block> generateHammeringMap() {
+        public static @NotNull HashMap<Block, Block> generateHammeringMap() {
             HashMap<Block, Block> HammeringMap = new HashMap<>();
 
-            recipeList.forEach((key, value) -> HammeringMap.put(
-                    BLOCK.get(new Identifier("simplehammers", key)),
-                    BLOCK.get(new Identifier("simplehammers", value))
+            defaultRecipeList.forEach((key, value) -> HammeringMap.put(
+                    BLOCK.get(new Identifier(key)),
+                    BLOCK.get(new Identifier(value))
             ));
 
             return HammeringMap;
         }
     }
-
-    public static HashMap<Block, Block> getHammeringMapFromConfig() {
-        return HammerConfig.generateHammeringMap();
+    public static @NotNull HashMap<Block, Block> getHammeringMapFromConfig() {
+        return HammerRecipeConfig.generateHammeringMap();
     }
 }
+
+// TODO: Rewrite this section at a later date so that I can reference the created HammeringMap outside of the HammerConfig class.
+// Right now, everything related to the recipeList is static. That means there is only one copy. This also means, it won't be picked up by
+// Gson, the JSON parsing library I'm using. This means that although theoretically, anyone can now add their own hammering recipes, in practice
+// It will be impossible unless I figure out how to make these methods referenceable in a static context without unstaticing the stuff in HammerConfig.
