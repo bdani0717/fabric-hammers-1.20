@@ -16,6 +16,7 @@ public class SimpleHammersPlugin implements IModPlugin {
      * The unique ID for this mod plugin.
      * The namespace should be your mod's modId.
      */
+
     @Override
     public @NotNull Identifier getPluginUid() {
         return SIMPLEHAMMERS_JEI;
@@ -40,17 +41,6 @@ public class SimpleHammersPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         IModPlugin.super.registerRecipes(registration);
-    }
-
-    /**
-     * Register recipe catalysts.
-     * Recipe Catalysts are ingredients that are needed in order to craft other things.
-     * Vanilla examples of Recipe Catalysts are the Crafting Table and Furnace.
-     *
-     * @param registration
-     */
-    @Override
-    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
     }
 
     /**
