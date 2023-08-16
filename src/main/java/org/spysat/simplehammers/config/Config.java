@@ -16,9 +16,9 @@ public class Config {
             public HammerRecipe(String inputBlock, String outputBlock) {
                 this.input = inputBlock;
                 this.output = outputBlock;
-            };
+            }
 
-            public HammerRecipe() {};
+            public HammerRecipe() {}
         }
 
         private ArrayList<HammerRecipe> recipeList = new ArrayList<>() {{

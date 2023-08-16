@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.config.ConfigProvider;
 
 public class CustomToolMaterial implements ToolMaterial {
+
     private int durability;
     private float miningSpeedMultiplier;
     private float attackDamage;

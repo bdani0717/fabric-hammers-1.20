@@ -6,7 +6,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.spysat.simplehammers.SimpleHammers;
-import org.spysat.simplehammers.config.ConfigProvider;
 import org.spysat.simplehammers.material.CustomToolMaterial;
 
 public class ImpactHammerItem extends HammerItem {

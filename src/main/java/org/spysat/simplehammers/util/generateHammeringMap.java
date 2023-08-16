@@ -12,7 +12,7 @@ public class generateHammeringMap {
         HashMap<Block,Block> HammeringMap = new HashMap<>();
 
         return HammeringMap;
-    };
+    }
 }
 
 //TODO - Generate the Hammering Map from the Config's recipeList. The HammeringMap is a HashMap of type <Block, Block> which is used in the BlockHarvestMixin
