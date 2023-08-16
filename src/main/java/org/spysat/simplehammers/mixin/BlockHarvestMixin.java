@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spysat.simplehammers.item.HammerItem;
-import org.spysat.simplehammers.config.Config;
+import org.spysat.simplehammers.util.HammerRecipeSerialization;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public abstract class BlockHarvestMixin {
         if (tool.getItem() instanceof HammerItem) {
             Block input = builder.get(LootContextParameters.BLOCK_STATE).getBlock();
             Block output;
-            if((output = Config.getHammeringMapFromConfig().get(input)) != null) {
+            if((output = HammerRecipeSerialization.getHammeringMap().get(input)) != null) {
                 cir.setReturnValue(List.of(new ItemStack(output)));
             }
         }

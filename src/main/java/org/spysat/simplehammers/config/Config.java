@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 @SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal", "MismatchedQueryAndUpdateOfCollection", "unused"})
 public class Config {
-    private class HammerConfig {
+    public class HammerConfig {
         private class HammerRecipe {
             String input;
             String output;
