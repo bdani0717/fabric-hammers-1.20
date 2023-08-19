@@ -34,9 +34,7 @@ public class ModItems extends HammerItem {
     }
 
     private static void addToToolsGroup(Item item) {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(item);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(item));
     }
 
     public static void registerHammers() {
@@ -55,8 +53,4 @@ public class ModItems extends HammerItem {
         return this.miningRadius;
     }
 
-    @Override
-    public boolean playBreakEffects() {
-        return false;
-    }
 }
