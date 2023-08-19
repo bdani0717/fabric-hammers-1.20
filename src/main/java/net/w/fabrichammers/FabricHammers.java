@@ -3,8 +3,8 @@ package net.w.fabrichammers;
 import net.fabricmc.api.ModInitializer;
 import net.w.fabrichammers.config.ConfigProvider;
 import net.w.fabrichammers.item.EmeraldToolItem;
-import net.w.fabrichammers.item.HammerItem;
-import net.w.fabrichammers.item.HammerItemGroup;
+import net.w.fabrichammers.item.ModItems;
+import net.w.fabrichammers.item.ModItemGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,9 +16,9 @@ public class FabricHammers implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Loading fabric hammers...");
 		ConfigProvider.loadOrcreate();
-		HammerItem.registerHammers();
+		ModItems.registerHammers();
 		EmeraldToolItem.registerItems();
 
-		HammerItemGroup.registerItemGroup();
+		ModItemGroup.registerItemGroup();
 	}
 }

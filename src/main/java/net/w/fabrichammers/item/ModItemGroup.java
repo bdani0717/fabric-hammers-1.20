@@ -10,20 +10,20 @@ import net.minecraft.util.Identifier;
 import net.w.fabrichammers.FabricHammers;
 import net.w.fabrichammers.config.ConfigProvider;
 
-public class HammerItemGroup {
+public class ModItemGroup {
     private static final ItemGroup FABRIC_HAMMERS = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(HammerItem.DIAMOND_HAMMER))
+            .icon(() -> new ItemStack(ModItems.DIAMOND_HAMMER))
             .displayName(Text.translatable("itemgroup.fabrichammers"))
             .entries((displayContext, entries) -> {
-                entries.add(HammerItem.WOODEN_HAMMER);
-                entries.add(HammerItem.STONE_HAMMER);
-                entries.add(HammerItem.IRON_HAMMER);
-                entries.add(HammerItem.GOLDEN_HAMMER);
-                entries.add(HammerItem.DIAMOND_HAMMER);
-                entries.add(HammerItem.NETHERITE_HAMMER);
+                entries.add(ModItems.WOODEN_HAMMER);
+                entries.add(ModItems.STONE_HAMMER);
+                entries.add(ModItems.IRON_HAMMER);
+                entries.add(ModItems.GOLDEN_HAMMER);
+                entries.add(ModItems.DIAMOND_HAMMER);
+                entries.add(ModItems.NETHERITE_HAMMER);
 
                 if (ConfigProvider.CONFIG.isEnableEmeradlTools()) {
-                    entries.add(HammerItem.EMERALD_HAMMER);
+                    entries.add(ModItems.EMERALD_HAMMER);
                     entries.add(EmeraldToolItem.EMERALD_SWORD);
                     entries.add(EmeraldToolItem.EMERALD_PICKAXE);
                     entries.add(EmeraldToolItem.EMERALD_AXE);

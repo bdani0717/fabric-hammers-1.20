@@ -8,9 +8,9 @@ import net.minecraft.util.Identifier;
 import net.w.fabrichammers.FabricHammers;
 import net.w.fabrichammers.config.ConfigProvider;
 import net.w.fabrichammers.material.CustomToolMaterial;
-import net.w.fabrichammers.util.AoeTool;
+import draylar.magna.item.HammerItem;
 
-public class HammerItem extends PickaxeItem implements AoeTool {
+public class ModItems extends HammerItem {
     public static Item WOODEN_HAMMER;
     public static Item STONE_HAMMER;
     public static Item IRON_HAMMER;
@@ -21,13 +21,13 @@ public class HammerItem extends PickaxeItem implements AoeTool {
 
     private final int miningRadius;
 
-    public HammerItem(String id) {
+    public ModItems(String id) {
         super(CustomToolMaterial.fromConfig(id), 1, -3.2F, new Item.Settings());
         this.miningRadius = ConfigProvider.CONFIG.getMiningRadius(id);
     }
 
     private static Item registerHammer(String id) {
-        Item hammer = Registry.register(Registries.ITEM, new Identifier(FabricHammers.MOD_ID, id), new HammerItem(id));
+        Item hammer = Registry.register(Registries.ITEM, new Identifier(FabricHammers.MOD_ID, id), new ModItems(id));
         addToToolsGroup(hammer);
 
         return hammer;
