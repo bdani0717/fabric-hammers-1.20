@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "simplehammers:item/iron_impact_hammer"
-  }
-}
