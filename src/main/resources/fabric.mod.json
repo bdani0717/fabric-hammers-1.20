@@ -22,7 +22,7 @@
 			"net.w.fabrichammers.FabricHammersClient"
 		],
 		"fabric-datagen": [
-			"net.w.fabrichammers.FabricHammersDataGenerator"
+			"net.w.fabrichammers.datagen.FabricHammersDataGenerator"
 		]
 	},
 	"mixins": [

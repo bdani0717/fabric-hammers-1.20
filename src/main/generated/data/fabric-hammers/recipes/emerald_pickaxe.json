@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ddd",
-    " s ",
-    " s "
-  ],
+  "category": "equipment",
   "key": {
-    "d": {
+    "E": {
       "item": "minecraft:emerald"
     },
-    "s": {
+    "S": {
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "EEE",
+    " S ",
+    " S "
+  ],
   "result": {
     "item": "fabrichammers:emerald_pickaxe"
-  }
+  },
+  "show_notification": true
 }
