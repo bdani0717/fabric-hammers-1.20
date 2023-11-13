@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dDd",
+    "dsd",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:gold_block"
+    },
+    "d": {
+      "item": "minecraft:gold_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabrichammers:golden_excavator"
+  }
+}

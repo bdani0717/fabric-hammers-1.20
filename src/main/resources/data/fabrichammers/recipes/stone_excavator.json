@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dDd",
+    "dsd",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:stone"
+    },
+    "d": {
+      "item": "minecraft:cobblestone"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabrichammers:stone_hammer"
+  }
+}

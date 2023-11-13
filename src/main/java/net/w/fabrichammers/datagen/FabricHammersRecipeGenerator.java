@@ -10,6 +10,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 import net.w.fabrichammers.config.ConfigProvider;
 import net.w.fabrichammers.item.EmeraldToolItem;
+import net.w.fabrichammers.item.ExcavatorItem;
 import net.w.fabrichammers.item.HammerItem;
 
 import java.util.function.Consumer;
@@ -83,5 +84,16 @@ public class FabricHammersRecipeGenerator extends FabricRecipeProvider {
                 .criterion(RecipeProvider.hasItem(Items.EMERALD), RecipeProvider.conditionsFromItem(Items.EMERALD))
                 .criterion(RecipeProvider.hasItem(Items.STICK), RecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(HammerItem.EMERALD_HAMMER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ExcavatorItem.EMERALD_EXCAVATOR)
+                .pattern("EBE")
+                .pattern("ESE")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('B', Items.EMERALD_BLOCK)
+                .input('S', Items.STICK)
+                .criterion(RecipeProvider.hasItem(Items.EMERALD), RecipeProvider.conditionsFromItem(Items.EMERALD))
+                .criterion(RecipeProvider.hasItem(Items.STICK), RecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ExcavatorItem.EMERALD_EXCAVATOR)));
     }
 }

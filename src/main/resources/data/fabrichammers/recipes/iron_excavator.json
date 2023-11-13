@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dDd",
+    "dsd",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:iron_block"
+    },
+    "d": {
+      "item": "minecraft:iron_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabrichammers:iron_excavator"
+  }
+}

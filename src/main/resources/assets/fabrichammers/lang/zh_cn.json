@@ -6,7 +6,15 @@
   "item.fabrichammers.diamond_hammer": "钻石锤",
   "item.fabrichammers.netherite_hammer": "下界合金锤",
 
+  "item.fabrichammers.wooden_excavator": "木挖掘机",
+  "item.fabrichammers.stone_excavator": "石挖掘机",
+  "item.fabrichammers.iron_excavator": "铁挖掘机",
+  "item.fabrichammers.golden_excavator": "金挖掘机",
+  "item.fabrichammers.diamond_excavator": "钻石挖掘机",
+  "item.fabrichammers.netherite_excavator": "下界合金挖掘机",
+
   "item.fabrichammers.emerald_hammer": "绿宝石锤",
+  "item.fabrichammers.emerald_excavator": "绿挖掘机",
   "item.fabrichammers.emerald_sword": "绿宝石剑",
   "item.fabrichammers.emerald_pickaxe": "绿宝石镐",
   "item.fabrichammers.emerald_axe": "绿宝石",
