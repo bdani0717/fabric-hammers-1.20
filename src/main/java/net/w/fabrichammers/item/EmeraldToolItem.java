@@ -17,7 +17,7 @@ public class EmeraldToolItem {
     public static Item EMERALD_HOE;
 
     public static void registerItems() {
-        if (!ConfigProvider.CONFIG.isEnableEmeradlTools()) return;
+        if (!ConfigProvider.CONFIG.isEnableEmeraldTools()) return;
 
         EMERALD_SWORD = Registry.register(Registries.ITEM, new Identifier(FabricHammers.MOD_ID, "emerald_sword"),
                 new SwordItem(CustomToolMaterial.EMERALD, 3, -2.4F, new Item.Settings()));

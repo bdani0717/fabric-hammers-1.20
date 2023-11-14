@@ -78,7 +78,7 @@ public class Config {
 
     public float getHammerDurabilityMultipier() { return this.hammerDurabilityMultipier; }
 
-    public boolean isEnableEmeradlTools() { return this.enableEmeradlTools; }
+    public boolean isEnableEmeraldTools() { return this.enableEmeradlTools; }
 
     public String getConfigVersion() { return this.configVersion; }
 }

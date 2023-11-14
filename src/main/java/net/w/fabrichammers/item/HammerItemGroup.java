@@ -29,8 +29,9 @@ public class HammerItemGroup {
                 entries.add(ExcavatorItem.DIAMOND_EXCAVATOR);
                 entries.add(ExcavatorItem.NETHERITE_EXCAVATOR);
 
-                if (ConfigProvider.CONFIG.isEnableEmeradlTools()) {
+                if (ConfigProvider.CONFIG.isEnableEmeraldTools()) {
                     entries.add(HammerItem.EMERALD_HAMMER);
+                    entries.add(ExcavatorItem.EMERALD_EXCAVATOR);
                     entries.add(EmeraldToolItem.EMERALD_SWORD);
                     entries.add(EmeraldToolItem.EMERALD_PICKAXE);
                     entries.add(EmeraldToolItem.EMERALD_AXE);

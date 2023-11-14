@@ -47,7 +47,7 @@ public class ExcavatorItem extends ShovelItem implements AoeTool {
         DIAMOND_EXCAVATOR = registerExcavator("diamond_excavator");
         NETHERITE_EXCAVATOR = registerExcavator("netherite_excavator");
 
-        if (ConfigProvider.CONFIG.isEnableEmeradlTools()) EMERALD_EXCAVATOR = registerExcavator("emerald_excavator");
+        if (ConfigProvider.CONFIG.isEnableEmeraldTools()) EMERALD_EXCAVATOR = registerExcavator("emerald_excavator");
     }
 
     @Override

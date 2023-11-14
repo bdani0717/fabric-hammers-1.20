@@ -22,7 +22,7 @@ public class FabricHammersRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        if (ConfigProvider.CONFIG.isEnableEmeradlTools()) return;
+        if (ConfigProvider.CONFIG.isEnableEmeraldTools()) return;
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EmeraldToolItem.EMERALD_PICKAXE)
                 .pattern("EEE")

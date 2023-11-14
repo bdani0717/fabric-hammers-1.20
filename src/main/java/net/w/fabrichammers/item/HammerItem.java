@@ -47,7 +47,7 @@ public class HammerItem extends PickaxeItem implements AoeTool {
         DIAMOND_HAMMER = registerHammer("diamond_hammer");
         NETHERITE_HAMMER = registerHammer("netherite_hammer");
 
-        if (ConfigProvider.CONFIG.isEnableEmeradlTools()) EMERALD_HAMMER = registerHammer("emerald_hammer");
+        if (ConfigProvider.CONFIG.isEnableEmeraldTools()) EMERALD_HAMMER = registerHammer("emerald_hammer");
     }
 
     @Override
