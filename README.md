@@ -2,7 +2,7 @@
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fabric-hammers?label=modrinth%20downloads)](https://modrinth.com/mod/fabric-hammers)
 # Fabric Hammers
 
-Fabric Hammers is a mod that adds hammers to the game that can mine blocks in a radius.
+Fabric Hammers is a mod that adds hammers and excavators to the game that can mine blocks in a radius.
 It also adds emerald tools, this feature can be turned off in the config.
 
 ![alt text](https://i.imgur.com/Ztr7E9O.png)
