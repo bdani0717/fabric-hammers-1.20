@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "base": {
-    "item": "fabrichammers:diamond_hammer"
+    "item": "fabrichammers:diamond_excavator"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
