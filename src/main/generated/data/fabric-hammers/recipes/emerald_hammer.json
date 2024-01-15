@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
+    "B": {
+      "item": "minecraft:emerald_block"
+    },
     "E": {
       "item": "minecraft:emerald"
     },
@@ -10,11 +13,11 @@
     }
   },
   "pattern": [
-    "EEE",
+    "BEB",
     " S ",
     " S "
   ],
   "result": {
-    "item": "fabrichammers:emerald_pickaxe"
+    "item": "fabrichammers:emerald_hammer"
   }
 }

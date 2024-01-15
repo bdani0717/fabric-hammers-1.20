@@ -3,7 +3,7 @@
 	"id": "fabric-hammers",
 	"version": "${version}",
 	"name": "Fabric Hammers",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Fabric Hammers is a mod that adds hammers and excavators to the game that can mine blocks in a radius.",
 	"authors": [
 		"W"
 	],
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/fabric-hammers/icon.png",
+	"icon": "assets/fabrichammers/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -29,12 +29,9 @@
 		"fabrichammers.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20",
+		"fabricloader": ">=0.15",
+		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

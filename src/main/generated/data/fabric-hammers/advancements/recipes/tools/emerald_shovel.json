@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:emerald_pickaxe"
+        "recipe": "minecraft:emerald_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:emerald_pickaxe"
+      "minecraft:emerald_shovel"
     ]
   }
 }

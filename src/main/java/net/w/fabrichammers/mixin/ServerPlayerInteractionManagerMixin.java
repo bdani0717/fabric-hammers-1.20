@@ -1,5 +1,6 @@
 package net.w.fabrichammers.mixin;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.network.ServerPlayerInteractionManager;
@@ -7,6 +8,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.w.fabrichammers.impl.PlayerInteractionManagerExtension;
 import net.w.fabrichammers.util.AoeTool;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -16,15 +18,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = ServerPlayerInteractionManager.class, priority = 1001)
 public class ServerPlayerInteractionManagerMixin implements PlayerInteractionManagerExtension {
-	@Shadow public ServerPlayerEntity player;
-	@Shadow public ServerWorld world;
-	@Unique private boolean fabrichammers_isMining = false;
+	@Final
+	@Shadow
+	protected ServerPlayerEntity player;
+	@Shadow
+	protected ServerWorld world;
+	@Unique
+	private boolean fabrichammers_isMining = false;
 
 	@Inject(
 			method = "tryBreakBlock",
 			at = @At(
 					value = "INVOKE",
-					target = "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)V"
+					target = "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/block/BlockState;"
 			),
 			cancellable = true
 	)

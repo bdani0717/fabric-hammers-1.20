@@ -10,11 +10,11 @@
     }
   },
   "pattern": [
-    "EEE",
-    " S ",
-    " S "
+    "E",
+    "E",
+    "S"
   ],
   "result": {
-    "item": "fabrichammers:emerald_pickaxe"
+    "item": "fabrichammers:emerald_sword"
   }
 }
